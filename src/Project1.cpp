@@ -8,59 +8,61 @@
 
 #include <iostream>
 #include <conio.h>
+#include <cstdlib>
 using namespace std;
 
 int main() {
 
-	 int option; // user's entered option will be saved in this variable
-	 char luachon;
-	  do //do-while loop starts here.that display menu again and again until user select to exit program
-	  {
-	     //Displaying Options for the menu
-	     cout << "1) Display Top Web Browsers List " << endl;
-	     cout << "2) Display Top Websites Name " << endl;
-	     cout << "3) Display Top Smartphone Brands List" << endl;
-	     cout << "4) Exit Program " << endl;
-	     //Prompting user to enter an option according to menu
-	     cout << "Please select an option : ";
-	     cin >> option;  // taking option value as input and saving in variable "option"
+	char option;
+	char luachon;
+	do
+	{
+		system("CLS");
+		cout << "****************ABC - <MSSV> ***************" << endl;
+		cout << "** 1. Tinh tien loi ngan hang.           **" << endl;
+		cout << "** 2. Dem so te bao song sot.            **" << endl;
+		cout << "** 3. Gia lap may tinh bo tui don gian.  **" << endl;
+		cout << "** 4. Lich van nien.                     **" << endl;
+		cout << "** 5. Hinh canh quat.                    **" << endl;
+		cout << "********************************************" << endl;
 
-	     if(option == 1) // Checking if user selected option 1
-	     {
-	       //Display some web browsers list
-	        cout << "Mozilla FireFox" << endl;
-	        cout << "Google Chrome" << endl;
-	        cout << "Microsoft Internet Explorer" << endl;
-	        cout << "Apple Safari" << endl;
-	     }
-	     else if(option == 2) // Checking if user selected option 2
-	     {
-	       //Displaying top sites
-	        cout << "Google" << endl;
-	        cout << "Facebook" << endl;
-	        cout << "Youtube" << endl;
-	        cout << "Yahoo" << endl;
-	     }
-	     else if(option == 3) // Checking if user selected option 3
-	     {
-	       //displaying top smartphone brands
-	        cout << "Apple" << endl;
-	        cout << "Samsung" << endl;
-	        cout << "HTC" << endl;
-	     }
-	     else if(option == 4) // Checking if user selected option 4
-	     {
-	       cout << "Terminating Program" << endl;
-	     }
-	     else //if user has entered invalid choice (other than 1,2,3 or 4)
-	     {
-	       //Displaying error message
-	       cout << "Invalid Option entered" << endl;
-	     }
-	     cout << "Ban co muon tiep tuc yes(y), no(n):" << endl;
-	     cin >> luachon;
-	  }
-	  while(luachon == 'y');  //condition of do-while loop
+		cout << "Hay chon mot chuc nang thuc hien: ";
+		cin >> option;
 
-	   return 0;
+		if (option == '1')
+		{
+			system("CLS");
+			cout << "1" << endl;
+		}
+		else if (option == '2') // Checking if user selected option 2
+		{
+			system("CLS");
+			cout << "2" << endl;
+		}
+		else if (option == '3') // Checking if user selected option 3
+		{
+			system("CLS");
+			cout << "3" << endl;
+		}
+		else if (option == '4') // Checking if user selected option 4
+		{
+			system("CLS");
+			cout << "4" << endl;
+		}
+		else if (option == '5') // Checking if user selected option 5
+		{
+			system("CLS");
+			cout << "5" << endl;
+		}
+		else //if user has entered invalid choice (other than 1,2,3 or 4)
+		{
+			system("CLS");
+			//Displaying error message
+			cout << "Gia tri ban chon khong hop le" << endl;
+		}
+		cout << "Ban co muon tiep tuc yes(y), no(n): ";
+		cin >> luachon;
+	} while (luachon == 'y');  //condition of do-while loop
+
+	return 0;
 }
