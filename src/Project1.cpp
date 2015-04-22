@@ -9,6 +9,7 @@
 #include <iostream>
 #include <conio.h>
 #include <cstdlib>
+#include "InHinhCanhQuat.h"
 using namespace std;
 
 int main() {
@@ -52,7 +53,17 @@ int main() {
 		else if (option == '5') // Checking if user selected option 5
 		{
 			system("CLS");
-			cout << "5" << endl;
+			int chieuCao;
+			cout << "Nhap chieu cao cua moi canh quat: ";
+			cin >> chieuCao;
+			char ** ketQua;
+			ketQua = inHinhCanhQuat(chieuCao);
+			for (int hang = 0; hang < chieuCao * 2; hang++) {
+				for (int cot = 0; cot < chieuCao * 2; cot++) {
+					cout << ketQua[hang][cot] << " ";
+				}
+				cout << endl;
+			}
 		}
 		else //if user has entered invalid choice (other than 1,2,3 or 4)
 		{
